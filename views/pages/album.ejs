@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+
+        <link rel="preload" href="/css/album.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/css/album.css"></noscript>
+
+        <script src="/js/album.js" defer="defer"></script>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section class="section-content">
+                    <h2>Load from album</h2>
+                    <p class="subhead mdl-color-text--grey-700">Load photos into your photo frame from your Google Photos albums.</p>
+                    <ul class="mdl-list" id="albums"></ul>
+                </section>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+        <script type="application/javascript">
+            onDocReady(() =>{
+                // Load the list of albums from the backend when the page is ready.
+                listAlbums().then(() =>{
+                    // Clicking the 'add to frame' button starts an import request.
+                    getElements('#albums')
+                        .on('click', (event) => {
+                            const target = event.currentTarget;
+                            const albumId = target.dataset.id;
+                            const albumTitle = target.dataset.title;
+
+                            console.log('Importing album: ' + albumTitle);
+
+                            loadFromAlbum(albumTitle, albumId);
+                        },
+                        '.album-title');
+                });
+            });
+        </script>
+    </body>
+</html>

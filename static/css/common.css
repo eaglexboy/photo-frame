@@ -1,0 +1,91 @@
+/* Google Button (GP) CSS */
+.gp-button {
+    border: none;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    height: 40px;
+    margin: 0;
+    min-width: 241px;
+    padding: 0 16px 0 48px;
+    display: inline-block;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    will-change: box-shadow;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: left;
+    line-height: 40px;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.20);
+    background-image: url('/images/logo_photos_24dp.svg');
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+.gp-button::-moz-focus-inner {
+    border: 0;
+}
+
+.gp-button:hover {
+    background-color: rgba(158, 158, 158, 0.20);
+}
+
+.gp-button:focus:not(:active) {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.gp-button:active {
+    background-color: rgba(158, 158, 158, 0.40);
+}
+
+.gp-button.gp-button--colored {
+    color: rgb(63, 81, 181);
+}
+
+.gp-button.gp-button--colored:focus:not(:active) {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+input.gp-button[type="submit"] {
+    -webkit-appearance: none;
+}
+
+p .gp-button {
+    margin-top: 16px;
+}
+
+/* Adds the raised element to GP Photos Button */
+.raised {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Google Button (GP) CSS */
+
+.mdl-navigation__link:last-of-type {
+    float: right;
+    margin-right: 0;
+}
+
+.section-content {
+    padding: 2.5% 7.5%;
+    margin: 0 auto;
+}
+
+.subhead {
+    font-size: 1.2em;
+}
+
+/** Element CSS **/
+#userAvatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin: 5px;
+}

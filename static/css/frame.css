@@ -1,0 +1,25 @@
+figure {
+    display: inline-block;
+}
+
+.floating-button {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.img-fluid{
+    max-width:100%;
+    height:auto;
+}
+
+.rounded{
+    border-radius: .25rem;
+}
+
+#layoutTitle{
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    width: 100%;
+}

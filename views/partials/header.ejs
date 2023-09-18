@@ -1,0 +1,29 @@
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <div id="layoutTitle">
+            <!-- Title -->
+            <h1 class="" >Photo Frame</h1>
+        </div>
+
+        <!-- Add spacer, to align avatar/disconnect to the right -->
+        <div class="mdl-layout-spacer"></div>
+
+        <nav class="mdl-navigation">
+            <img alt="" src="<%= avatarUrl %>" id="userAvatar" />
+            <%= name %>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row">
+        <div style="width: 100%">
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/">PREVIEW</a>
+                <a class="mdl-navigation__link" href="/album">ALBUMS</a>
+                <div class="mdl-layout-spacer"></div>
+                <a class="mdl-navigation__link" href="/logout">Disconnect</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<%- include('./dialogs') %>

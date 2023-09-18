@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+
+        <link rel="preload" href="/css/frame.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/css/frame.css"></noscript>
+
+        <script src="/js/frame.js" defer="defer"></script>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section class="section-content">
+                    <div>
+                        <h2>Photo Frame Album Preview</h2>
+                        <p class="subhead mdl-color-text--grey-700">
+                            Welcome to the photo frame sample. Select an option above to load images from your Google Photos library.<br />
+                            Select a photo or use the "View in frame" button to start your photo frame experience!
+                        </p>
+                    </div>
+                    <div>
+                        <p id="preview-description" style="display: none;">
+                        <div class="snippet">
+                            <span id="images-count">0</span> images loaded from
+                            <pre id="images-source">Please select an Album</pre>
+                        </div>
+                        </p>
+                    </div>
+
+                    <div id="images-container"></div>
+                    <div id="images_empty" style="display:none">
+                        <img src="/images/null-results.png">
+                        <p>No results, try searching again</p>
+                    </div>
+                </section>
+            </div>
+            <div class="floating-button">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="startFrame">
+                    <i class="material-icons">fullscreen</i>
+                    <span class="float-btn-label">View Photo Frame</span>
+                </button>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+        <script type="application/javascript">
+            onDocReady(() =>{
+                // Load the queue of photos selected by the user for the photo
+                loadQueue();
+
+                getElements('#startFrame').on('click', function(event){
+                    event.preventDefault();
+                    window.open('/frame', '_blank', 'scrollbars=no,resizable=no')
+                })
+            });
+        </script>
+    </body>
+</html>

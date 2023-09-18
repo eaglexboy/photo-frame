@@ -1,0 +1,31 @@
+{
+  "name": "photo-frame",
+  "version": "1.0.0",
+  "description": "This application will load the selected Google Photo Album and randomly pick photos and videos in it and show them on the screen.",
+  "keywords": [
+    "nodejs",
+    "Google Photo API"
+  ],
+  "license": "Apache-2.0",
+  "author": "Eleazar Castellanos",
+  "main": "app.js",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-session": "^1.17.2",
+    "express-winston": "^4.2.0",
+    "google-auth-library": "^9.0.0",
+    "material-design-icons": "^3.0.1",
+    "material-design-lite": "^1.3.0",
+    "node-fetch": "^3.2.10",
+    "node-persist": "^3.1.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-oauth2-refresh": "^2.2.0",
+    "photoswipe": "^5.3.9",
+    "session-file-store": "^1.5.0",
+    "winston": "^3.7.2"
+  }
+}

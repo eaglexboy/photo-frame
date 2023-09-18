@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head')%>
+
+        <!-- Material Design Lite -->
+        <link rel="preload" href="/mdlite/material.indigo-pink.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" ref="/mdlite/material.indigo-pink.min.css"></noscript>
+        <link rel="stylesheet" href="/css/login.css">
+        
+
+        <!-- Material Design Lite -->
+        <script src="/mdlite/material.min.js" defer></script>
+    </head>
+    <body style="background-color: #3F51B5">
+        <header class="header mdl-typography--text-center mdl-color--primary mdl-color-text--white">
+            <div>
+                <h1>Photo Frame</h1>
+            </div>
+        </header>
+        <main class="demo-main">
+            <div class="page-content mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="login-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <div class="login-img">
+                        <img src="/images/Photo-frame-illustration.png" alt="Photo frame illustration">
+                    </div>
+                    <h3>Set up your Photo Frame</h3>
+                    <p>Put your favorite moments on display. To get set up, connect Photo Frame to your photo library.</p>
+                    <p>
+                        <button class="gp-button raised" id="login">
+                            Connect to Google Photos
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <script>
+            onDocReady(function () {
+                getElements('#login').on('click', function (e) {
+                    // Make the request to the backend to log in.
+                    window.location = "/auth/google";
+                })
+            });
+        </script>
+    </body>
+</html>

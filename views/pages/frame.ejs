@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/css') %>
+        <link rel="preload" href="/css/photoFrame.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/css/photoFrame.css"></noscript>
+        <style>
+            .loading-dialog{
+                color: white;
+            }
+        </style>
+
+        <script type="module">
+            import {
+                isEmpty,
+                isUndefinedOrNull,
+                isFunction
+            } from '/js/libs/core.js';
+            import {
+                initField
+            } from '/js/models/models-core.js';
+            import {
+                defaultTransformer
+            } from '/js/models/transformers.js';
+            import {
+                MediaItem
+            } from '/js/models/photos.js';
+
+            window.defaultTransformer = defaultTransformer;
+            window.initField = initField;
+            window.isEmpty = isEmpty;
+            window.isUndefinedOrNull = isUndefinedOrNull;
+            window.isFunction = isFunction;
+            window.MediaItem = MediaItem;
+        </script>
+
+        <script src="/js/core.js"></script>
+        <script src="/js/core-ui.js"></script>
+        <script src="/js/prototypes.js" defer="defer"></script>
+        <script src="/js/network.js"></script>
+        <script src="/js/gsap.min.js"></script>
+        <script src="/js/imageModel.js"></script>
+        <script src="/js/photoFrame.js" defer="defer"></script>
+    </head>
+    <body>
+        <%- include('../partials/dialogs') %>
+        <div class="container"></div>
+        <div class="focused"></div>
+        <div id="noPhotos" style="display: none">
+            No Photos Available. Please make sure album is selected.
+        </div>
+    </body>
+</html>

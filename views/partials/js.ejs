@@ -1,0 +1,29 @@
+<script src="/mdlite/material.min.js" defer="defer"></script>
+
+<script type="module" src="/photoswipe/photoswipe-lightbox.esm.js"></script>
+<script type="module" src="/photoswipe/photoswipe.esm.js"></script>
+<script type="module">
+    import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+    import {
+        isEmpty,
+        isUndefinedOrNull,
+        isFunction
+    } from '/js/libs/core.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+        pswpModule: () => import('/photoswipe/photoswipe.esm.js'),
+    });
+
+    const isEmptyFunction = isEmpty;
+
+    window.isEmpty = isEmptyFunction;
+    window.isFunction = isFunction;
+    window.isUndefinedOrNull = isUndefinedOrNull;
+
+    window.pswpLightbox = lightbox;
+</script>
+
+<script src="/js/core.js"></script>
+<script src="/js/prototypes.js" defer="defer"></script>
+<script src="/js/core-ui.js" defer="defer"></script>
+<script src="/js/network.js" defer="defer"></script>

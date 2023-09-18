@@ -1,0 +1,25 @@
+.album-title {
+    margin-right: 16px;
+}
+
+.mdl-button {
+    height: 40px;
+}
+
+.mdl-layout__header-row .mdl-navigation__link:first-child {
+    padding-left: 0;
+}
+
+.mdl-list__item {
+    padding: 0;
+    overflow: visible;
+}
+
+.mdl-list__item--two-line {
+    height: 96px;
+    width: 840px;
+}
+
+.mdl-layout__content {
+    display: block;
+}
