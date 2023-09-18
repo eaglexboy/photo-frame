@@ -142,7 +142,7 @@ class Box {
 
         setTimeout(() => {
             showAnimation.reverse(0).then(() => box.unfocus());
-        }, 120000);
+        }, 60000);
     }
 
     /**
