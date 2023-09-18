@@ -1,8 +1,8 @@
-#Photo Frame
+# Photo Frame
 
 This is a simple application which uses the [Google Photos Library API](https://developers.google.com/photos) as a source for the Photo Frame.
 
-This application is built using Express.js](https://expressjs.com/) and [Greensock Animation](https://greensock.com/)
+This application is built using [Express.js](https://expressjs.com/) and [Greensock Animation](https://greensock.com/)
 
 ## App Overview
 This web application is an online photo frame that allows users to load photos from an album or the library and then show these images in a full screen Animated way.
